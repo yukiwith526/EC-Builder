@@ -1,0 +1,184 @@
+@import '../cosmetics/cosmetics.css';
+
+.storefront--lifestyle {
+  --sf-serif: "Cormorant Garamond", "Noto Serif JP", serif;
+  --sf-sans: "Jost", "Noto Sans JP", sans-serif;
+  background: #fff;
+}
+
+.storefront--lifestyle .sf-announce {
+  background: #111;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+.storefront--lifestyle .sf-header {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.storefront--lifestyle .sf-logo {
+  font-size: clamp(22px, 3vw, 30px);
+  letter-spacing: 0.04em;
+}
+
+.storefront--lifestyle .sf-hero {
+  height: min(68vh, 620px);
+  width: min(1180px, calc(100% - 40px));
+  margin: 18px auto 80px;
+  border-radius: 0;
+}
+
+.storefront--lifestyle .sf-hero::after {
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.45));
+}
+
+.storefront--lifestyle .sf-hero__copy h1 {
+  font-family: var(--sf-sans);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.storefront--lifestyle .sf-btn {
+  background: #fff;
+  color: #1a1a1a;
+  border: 0;
+}
+
+.storefront--lifestyle .sf-concept {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+  gap: 0;
+  align-items: stretch;
+  width: 100%;
+  min-height: min(72vh, 640px);
+  margin: 0 0 96px;
+  padding: 0;
+  background: #3d4a42;
+  color: #f4f1ea;
+  text-align: left;
+}
+
+.storefront--lifestyle .sf-concept__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: clamp(48px, 7vw, 96px) clamp(28px, 6vw, 88px);
+}
+
+.storefront--lifestyle .sf-concept__text .sf-kicker {
+  margin: 0;
+  color: rgba(244, 241, 234, 0.52);
+  letter-spacing: 0.32em;
+}
+
+.storefront--lifestyle .sf-concept__text h2 {
+  display: block;
+  margin: 0;
+  max-width: 9em;
+  color: #fff;
+  font-family: var(--sf-serif);
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.28;
+  letter-spacing: 0.02em;
+}
+
+.storefront--lifestyle .sf-concept__copy {
+  margin: 8px 0 0;
+  max-width: 34em;
+  color: rgba(244, 241, 234, 0.78);
+  font-family: var(--sf-serif);
+  font-size: 16px;
+  line-height: 2.05;
+}
+
+.storefront--lifestyle .sf-concept__media {
+  display: block;
+  height: 100%;
+  min-height: min(72vh, 640px);
+  overflow: hidden;
+}
+
+.storefront--lifestyle .sf-concept__media img,
+.storefront--lifestyle .sf-concept__fallback {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: min(72vh, 640px);
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.storefront--lifestyle .sf-sign {
+  display: none;
+}
+
+.storefront--lifestyle .sf-pickup-block {
+  width: min(1180px, calc(100% - 40px));
+}
+
+.storefront--lifestyle .sf-pickup-card img,
+.storefront--lifestyle .sf-pickup-card .sf-card__fallback {
+  object-fit: cover;
+  background: #f6f5f2;
+}
+
+.storefront--lifestyle .sf-products header {
+  text-align: center;
+}
+
+.storefront--lifestyle .sf-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.storefront--lifestyle .sf-pdp__cart {
+  border-color: #c57b5d;
+  color: #c57b5d;
+}
+
+.storefront--lifestyle .sf-pdp__buy-now {
+  background: #c57b5d;
+}
+
+.storefront--lifestyle .sf-footer {
+  background: var(--sf-paper);
+}
+
+@media (max-width: 900px) {
+  .storefront--lifestyle .sf-concept {
+    grid-template-columns: 1fr;
+  }
+
+  .storefront--lifestyle .sf-concept__media img,
+  .storefront--lifestyle .sf-concept__fallback {
+    min-height: 320px;
+  }
+
+  .storefront--lifestyle .sf-concept__text {
+    padding: 40px 20px 48px;
+  }
+
+  .storefront--lifestyle .sf-concept__text h2 {
+    max-width: none;
+  }
+
+  .storefront--lifestyle .sf-pickup-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .storefront--lifestyle .sf-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .storefront--lifestyle .sf-hero {
+    width: calc(100% - 16px);
+    height: min(52vh, 420px);
+    margin: 10px auto 36px;
+  }
+}
